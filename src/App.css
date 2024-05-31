@@ -1,38 +1,263 @@
-.App {
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* !HEADER & BUTTONS START */
+
+h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 60px;
+  font-weight: 700;
+  color: #f4ce14;
+}
+
+h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 30px;
+  color: #fff;
+  margin-top: -1.5em;
+}
+
+h3 {
+  font-family: 'Markazi Text', serif;
+  font-size: 60px;
+  color: #000;
+  margin: 1em;
+  margin-right: 5em;
+}
+
+@media (max-width: 800px) {
+  h3 {
+    font-size: 60px;
+    margin-top: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+h4 {
+  font-family: 'Markazi Text', serif;
+  font-size: 60px;
+  font-weight: 700;
+  color: #000;
+}
+
+h5 {
+  font-family: 'Markazi Text', serif;
+  font-size: 30px;
+  color: #000;
+  margin-top: -2.5em;
+}
+
+#button {
+  background-color: #f4ce14;
+  color: #000;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  width: 12em;
+  height: 3em;
+  margin: 1em;
+  border-radius: 2em;
+  border: none;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+#button:hover {
+  cursor: pointer;
+}
+.specials #button {
+  margin-top: 4em;
+}
+
+@media (max-width: 400px) {
+  .specials #button {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+}
+
+.header {
+  display: flex;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  margin: 1em 5em;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1050px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1em 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  .logo img {
+    width: 75%;
+  }
+}
+
+/* !HEADER & BUTTONS END */
+
+/* !NAV START */
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  margin-top: 1em;
+  margin-left: 4em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navigation li {
+  display: inline-block;
+  margin: 1em;
+  color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navigation a {
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  color: #000;
+  text-decoration: none;
+}
+
+@media (max-width: 1050px) {
+  .navigation {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (min-width: 880px) {
+  .navigation {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* !NAV END */
+
+/* !MAIN START */
+
+/* !MAIN END */
+
+/* !SPECIALS START */
+
+/* !SPECIALS END */
+
+/* !TESTIMONIALS START */
+
+/* !TESTIMONIALS END */
+
+/* !ABOUT START */
+
+.owners {
+  width: 100%;
+  margin: 3em;
+}
+
+/* !ABOUT END */
+
+/* !FOOTER START */
+
+.footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: auto;
+  border-top: 10px groove #495e57;
 }
 
-.App-link {
-  color: #61dafb;
+.footer a {
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  color: #000;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 800px) {
+  .footer {
+    flex-wrap: wrap;
+    text-align: center;
   }
 }
+
+.footer img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .footer img {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.logo {
+  width: 20%;
+  margin-right: 2em;
+  display: flex;
+}
+
+.links {
+  width: 20%;
+  margin: 1em;
+  margin-top: 7em;
+}
+.contact {
+  width: 20%;
+  margin: 1em;
+  margin-top: 7em;
+}
+.social {
+  width: 20%;
+  margin: 1em;
+  margin-top: 7em;
+}
+
+@media (max-width: 800px) {
+  .logo,
+  .links,
+  .contact,
+  .social {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .logo {
+    margin: 10px;
+  }
+}
+
+/* !FOOTER END */

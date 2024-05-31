@@ -1,70 +1,101 @@
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import React from 'react';
 import logo from '../assets/Icons/Logo.svg';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <div className="footer">
       <div className="logo">
         <img src={logo} alt="Secondary Logo" />
       </div>
-      <nav className="links">
-        <h5>QUICK LINKS</h5>
+      <div className="links">
         <ul>
+          <h5>Navigation</h5>
           <li>
-            <a href="/">Home</a>
+            <Link to="/" className="a">
+              Home
+            </Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="/about" className="a">
+              About
+            </Link>
           </li>
           <li>
-            <a href="/menu">Menu</a>
+            <Link to="/menu" className="a">
+              Menu
+            </Link>
           </li>
           <li>
-            <a href="/reservations">Reservations</a>
+            <Link to="/reservations" className="a">
+              Reservations
+            </Link>
           </li>
           <li>
-            <a href="/order-online">Order Online</a>
+            <Link to="/order" className="a">
+              Order Online
+            </Link>
           </li>
           <li>
-            <a href="/login">Login</a>
+            <Link to="/login" className="a">
+              Login
+            </Link>
           </li>
         </ul>
-      </nav>
-
-      <address className="contact">
-        <h5>CONTACT</h5>
+      </div>
+      <div className="contact">
         <ul>
-          <li>1234 Somewhere Road #8254</li>
-          <li>(+91) XXXXX84223</li>
-          <li>contact@littlelemon.com</li>
+          <h5>Contact</h5>
+          <li>
+            <a href="tel:your-phone-number">Phone Number</a>
+          </li>
+          <li>
+            <a href="mailto:your-email@example.com">Email</a>
+          </li>
+          <li>
+            <a
+              href="https://www.google.com/maps/place/Your+Address"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Address
+            </a>
+          </li>
         </ul>
-      </address>
-
-      <aside className="social">
-        <h5>CONNECT WITH US</h5>
-        <ul>
-          <li>
-            <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
-              <FaFacebook />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
-              <FaTwitter />
-            </a>
-          </li>
+      </div>
+      <div className="social">
+        <ul className="social-icons">
+          <h5>Social Media</h5>
           <li>
             <a
               href="https://www.instagram.com"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
-              <FaInstagram />
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Linkedin
             </a>
           </li>
         </ul>
-      </aside>
-    </footer>
+      </div>
+    </div>
   );
 }
 
