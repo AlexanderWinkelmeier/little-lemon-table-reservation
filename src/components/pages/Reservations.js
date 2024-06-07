@@ -1,11 +1,11 @@
 import React from 'react';
+import BookingForm from '../BookingForm/BookingForm';
 
 function Reservations() {
   return (
-    <div>
-      <h1>Capstone</h1>
-      <h2>Under Construction</h2>
-    </div>
+    <>
+      <BookingForm />
+    </>
   );
 }
 
