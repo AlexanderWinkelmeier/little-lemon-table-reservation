@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
-import App from '../../App'; // Importiere die Haupt-App, um die Navigation zu simulieren
+import App from '../../App';
 
 test('displays the booking confirmation page after submitting the form', async () => {
   render(
@@ -11,25 +11,33 @@ test('displays the booking confirmation page after submitting the form', async (
     </MemoryRouter>
   );
 
-  // Erwartung, dass die Bestätigungsmeldung initial nicht vorhanden ist
   expect(
     screen.queryByText('Your reservation was successful')
   ).not.toBeInTheDocument();
 
-  // Warten darauf, dass das Formular erscheint
   await waitFor(() => {
     expect(screen.getByText('Reserve a table')).toBeInTheDocument();
   });
 
-  // Simulation des Formularabsendens
+  const dateInput = screen.getByLabelText('Choose date');
+  fireEvent.change(dateInput, { target: { value: '2024-06-13' } });
+
+  const timeInput = screen.getByLabelText('Choose time');
+  fireEvent.change(timeInput, { target: { value: '18:00' } });
+
+  const guestsInput = screen.getByLabelText('Number of guests');
+  fireEvent.change(guestsInput, { target: { value: '4' } });
+
+  const occasionInput = screen.getByLabelText('Occasion');
+  fireEvent.change(occasionInput, { target: { value: 'Anniversary' } });
+
   fireEvent.submit(
     screen.getByRole('button', { name: /Make Your reservation/i })
   );
 
-  // Warten darauf, dass die Bestätigungsmeldung erscheint
   await waitFor(() => {
     expect(
-      screen.getByText('Your reservation was successful')
+      screen.getByText(/Your reservation was successful!/)
     ).toBeInTheDocument();
   });
 });

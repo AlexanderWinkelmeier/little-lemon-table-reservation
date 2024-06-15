@@ -1,51 +1,51 @@
 import React from 'react';
 import logo from '../../assets/Icons/Logo.svg';
 import { Link } from 'react-router-dom';
-
+import styles from './Footer.module.css';
 
 function Footer() {
   return (
-    <div className="footer">
-      <div className="logo">
+    <section className={styles.footer}>
+      <div className={styles.logo}>
         <img src={logo} alt="Secondary Logo" />
       </div>
-      <div className="data">
-        <div className="links">
+      <div className={styles.data}>
+        <div className={styles.links}>
           <ul>
             <h5>Navigation</h5>
             <li>
-              <Link to="/" className="a">
+              <Link to="/" className={styles.link}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" className="a">
+              <Link to="/about" className={styles.link}>
                 About
               </Link>
             </li>
             <li>
-              <Link to="/menu" className="a">
+              <Link to="/menu" className={styles.link}>
                 Menu
               </Link>
             </li>
             <li>
-              <Link to="/reservations" className="a">
+              <Link to="/reservations" className={styles.link}>
                 Reservations
               </Link>
             </li>
             <li>
-              <Link to="/order-online" className="a">
+              <Link to="/order-online" className={styles.link}>
                 Order Online
               </Link>
             </li>
             <li>
-              <Link to="/login" className="a">
+              <Link to="/login" className={styles.link}>
                 Login
               </Link>
             </li>
           </ul>
         </div>
-        <div className="contact">
+        <div className={styles.contact}>
           <ul>
             <h5>Contact</h5>
             <li>
@@ -65,8 +65,8 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="social">
-          <ul className="social-icons">
+        <div className={styles.social}>
+          <ul className={styles.socialIcons}>
             <h5>Social Media</h5>
             <li>
               <a
@@ -98,7 +98,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

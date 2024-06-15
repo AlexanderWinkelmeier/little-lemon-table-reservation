@@ -2,10 +2,9 @@ import React from 'react';
 
 function NotFound() {
   return (
-    <div>
+    <main style={{ textAlign: 'center' }}>
       <h1>NOT FOUND</h1>
-      <h2>Under Construction</h2>
-    </div>
+    </main>
   );
 }
 

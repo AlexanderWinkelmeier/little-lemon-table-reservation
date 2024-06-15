@@ -2,9 +2,9 @@ import React from 'react';
 
 function Login() {
   return (
-    <div>
-      <h1>Under Construction</h1>
-    </div>
+    <main>
+      <h1 style={{ textAlign: 'center' }}>Under Construction</h1>
+    </main>
   );
 }
 
